@@ -1,14 +1,4 @@
-<? 
-include 'header.php'
-?>
-<style>
- .error{
-     display: block;
-     padding-top: 4px;
-     font-size: 16px;
-     color: red;
- }
-</style>
+<?php require_once 'header.php' ?>
 <div class="container mt-4">
         <h1>Test CURD</h1>
         <hr>
@@ -39,6 +29,11 @@ include 'header.php'
                         </div>
 
                         <div class="form-group">
+                            <label for="">Birthday</label>
+                            <input class="form-control" type="text" id="odpBirthday">
+                        </div>
+
+                        <div class="form-group">
                             <label for="">แผนก</label>
                             <select name="ocmDepart" class="form-control">
                                 <option value="PHP">Programmer PHP</option>
@@ -62,5 +57,8 @@ include 'header.php'
                 </div>
             </div>
         </div>
- <? include 'footer.php' ?>
-      
+        <script>
+            $('#odpBirthday').datepicker();
+            $('#odpBirthday').datepicker('setDate', 'today');
+        </script>
+        <?php require_once 'footer.php' ?>      

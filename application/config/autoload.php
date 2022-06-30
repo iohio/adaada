@@ -100,6 +100,7 @@ $autoload['drivers'] = array();
 $autoload['helper'] = array(
     'fn',
     'url',
+	'test_lang',
     'language'
 );
 

@@ -1,6 +1,4 @@
-<? 
-include 'header.php'
-?>
+<?php require_once 'header.php' ?>
         <div class="container mt-4">
         <h1>Test CURD</h1>
         <hr>
@@ -16,28 +14,28 @@ include 'header.php'
                     <?php foreach($aUser as $aVal){ ?>
                         <div class="form-group">
                             <label for="">First Name</label>
-                            <input type="text" value="<?=$aVal['name']?>" class="form-control" name="oetFname">
+                            <input type="text" value="<?=$aVal['FTCusName']?>" class="form-control" name="oetFname">
                         </div>
 
                         <div class="form-group">
                             <label for="">Last Name</label>
-                            <input type="text" value="<?=$aVal['lastn']?>" class="form-control" name="oetLname">
+                            <input type="text" value="<?=$aVal['FTCusLastName']?>" class="form-control" name="oetLname">
                         </div>
 
                         <div class="form-group">
                             <label for="">Address</label>
-                            <input type="text" value="<?=$aVal['address']?>" class="form-control" name="oetAddress">
+                            <input type="text" value="<?=$aVal['FTCusAddress']?>" class="form-control" name="oetAddress">
                         </div>
 
                         <div class="form-group">
                             <label for="">Email</label>
-                            <input type="text" value="<?=$aVal['email']?>" class="form-control" name="oetEmail">
+                            <input type="text" value="<?=$aVal['FTCusEmail']?>" class="form-control" name="oetEmail">
                         </div>
 
                         <div class="form-group">
                             <label for="">แผนก</label>
                             <select name="ocmDepart" class="form-control">
-                                <option value="<?=$aVal['d_code']?>"><?=$aVal['d_name']?></option>
+                                <option value="<?=$aVal['FTDepId']?>"><?=$aVal['FTDepName']?></option>
                                 <option value="PHP">Programmer PHP</option>
                                 <option value="C#">Programmer C#</option>
                                 <option value="Python">Programmer Python</option>
@@ -54,4 +52,4 @@ include 'header.php'
                 </div>
             </div>
         </div>
-        <? include 'footer.php' ?>
+        <?php require_once 'footer.php' ?>
